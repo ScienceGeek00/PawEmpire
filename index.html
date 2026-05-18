@@ -6,15 +6,13 @@
 
 <title>PawEmpire | ScienceGeek00</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
@@ -90,7 +88,7 @@ transform:translateY(-8px) scale(1.05);
 filter:drop-shadow(0 0 25px rgba(170,90,255,0.8));
 }
 
-/* CONTENT BOX */
+/* CONTENT */
 
 .content-wrapper{
 max-width:1250px;
@@ -106,6 +104,17 @@ padding:40px;
 margin-bottom:50px;
 box-shadow:0 0 35px rgba(110,0,255,0.22);
 backdrop-filter:blur(8px);
+}
+
+.section-image{
+display:flex;
+justify-content:center;
+margin-bottom:25px;
+}
+
+.section-image img{
+width:240px;
+filter:drop-shadow(0 0 15px rgba(180,100,255,0.5));
 }
 
 .info-box h2{
@@ -127,22 +136,18 @@ color:#f3f3f3;
 
 .rules-box{
 display:flex;
-flex-wrap:wrap;
+flex-direction:column;
 align-items:center;
-gap:40px;
-}
-
-.rules-box img{
-width:280px;
+text-align:left;
 }
 
 .rules-list{
-flex:1;
-min-width:300px;
+width:100%;
+margin-top:20px;
 }
 
 .rules-list ul{
-padding-left:25px;
+padding-left:30px;
 }
 
 .rules-list li{
@@ -187,7 +192,7 @@ padding:25px;
 }
 
 .info-box h2{
-font-size:36px;
+font-size:34px;
 }
 
 .info-box p{
@@ -206,13 +211,8 @@ font-size:20px;
 width:130px;
 }
 
-.rules-box{
-justify-content:center;
-text-align:left;
-}
-
-.rules-box img{
-width:220px;
+.section-image img{
+width:170px;
 }
 
 }
@@ -280,6 +280,10 @@ width:220px;
 
 <section class="info-box" id="about">
 
+<div class="section-image">
+<img src="About_Panel.png">
+</div>
+
 <h2>✨ 🎮 Meow & Welcome to PawEmpire! 🐱 ✨</h2>
 
 <p>
@@ -328,7 +332,11 @@ So grab your marble, lean back and enjoy the ride. 🐾
 
 <div class="rules-box">
 
+<div class="section-image">
 <img src="Rules_Panel.png">
+</div>
+
+<h2>📜 Stream Rules</h2>
 
 <div class="rules-list">
 
@@ -343,7 +351,7 @@ So grab your marble, lean back and enjoy the ride. 🐾
 
 <div class="rules-end">
 
-Da wir im Chat alle unseren Spaß haben wollen<br>
+Da wir im Chat alle unseren Spaß haben wollen,<br>
 bitte ich um Einhaltung der Regeln! DANKÖÖÖ ✨ &lt;3
 
 </div>
