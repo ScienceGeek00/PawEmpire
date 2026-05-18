@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawEmpire</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #070b14;
+      color: white;
+    }
+
+    header {
+      padding: 40px;
+      text-align: center;
+      background: linear-gradient(90deg,#111827,#1e293b);
+      border-bottom: 2px solid #7c3aed;
+    }
+
+    h1 {
+      margin: 0;
+      color: #c084fc;
+      font-size: 3rem;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    .search {
+      width: 100%;
+      padding: 15px;
+      border-radius: 15px;
+      border: none;
+      background: #111827;
+      color: white;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #7c3aed;
+      border-radius: 20px;
+      padding: 20px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(124,58,237,0.5);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #e879f9;
+    }
+
+    .command {
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 10px;
+      font-family: monospace;
+      color: #93c5fd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🐾 PawEmpire</h1>
+  <div class="subtitle">
+    Official ScienceGeek00 Community Hub
+  </div>
+</header>
+
+<div class="container">
+
+  <input class="search" placeholder="Search commands...">
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>🎮 Games</h2>
+
+      <div class="command">!rumble</div>
+      <div class="command">!duel</div>
+      <div class="command">!gamble</div>
+      <div class="command">!scratch</div>
+    </div>
+
+    <div class="card">
+      <h2>💰 Points</h2>
+
+      <div class="command">!points</div>
+      <div class="command">!top</div>
+      <div class="command">!give</div>
+    </div>
+
+    <div class="card">
+      <h2>👀 Lurk</h2>
+
+      <div class="command">!lurk</div>
+      <div class="command">!unlurk</div>
+      <div class="command">!lurks</div>
+    </div>
+
+    <div class="card">
+      <h2>⏱️ Watchtime</h2>
+
+      <div class="command">!watchtime</div>
+      <div class="command">!topwatchtime</div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  Built for the PawEmpire ✨
+</footer>
+
+</body>
+</html>
