@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PawEmpire</title>
 
-<title>PawEmpire | ScienceGeek00</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,562 +15,265 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
     font-family:'Poppins',sans-serif;
-    background:#050816;
+    background:
+    radial-gradient(circle at top,#101d46 0%,#04081d 55%,#02040f 100%);
     color:white;
     overflow-x:hidden;
 }
 
-/* ========================= */
-/* BACKGROUND */
-/* ========================= */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at top left,#7a3cff33,transparent 35%),
-    radial-gradient(circle at bottom right,#00c3ff22,transparent 35%),
-    linear-gradient(180deg,#071021 0%, #050816 100%);
-    z-index:-2;
-}
-
-body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    background-image:
-    radial-gradient(#ffffff22 1px, transparent 1px);
-    background-size:40px 40px;
-    opacity:0.15;
-    z-index:-1;
-}
-
-/* ========================= */
 /* HERO */
-/* ========================= */
 
 .hero{
     position:relative;
     width:100%;
-    height:520px;
-    overflow:hidden;
-}
-
-.hero img.banner{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    filter:brightness(0.4);
-}
-
-.hero-overlay{
-    position:absolute;
-    inset:0;
+    height:720px;
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.65)),
+    url("Profil_Banner.png");
+    background-size:cover;
+    background-position:center;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
-    backdrop-filter:blur(2px);
+}
+
+.hero-content{
+    backdrop-filter:blur(6px);
+    padding:30px;
+    border-radius:25px;
 }
 
 .profile-pic{
-    width:160px;
-    height:160px;
+    width:140px;
+    height:140px;
     border-radius:50%;
-    border:5px solid #a56dff;
+    border:5px solid #9c5cff;
     box-shadow:
-    0 0 25px #9f6bff88,
-    0 0 55px #00cfff55;
+    0 0 25px #9c5cff,
+    0 0 60px rgba(156,92,255,0.5);
     margin-bottom:20px;
-    object-fit:cover;
 }
 
 .hero h1{
-    font-size:72px;
+    font-size:82px;
     font-weight:700;
-    background:linear-gradient(90deg,#c689ff,#53dfff);
+    background:linear-gradient(90deg,#b76dff,#6bc7ff);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-    font-size:21px;
     margin-top:10px;
-    color:#dcdcdc;
+    font-size:28px;
+    color:#d8d8d8;
 }
 
-/* ========================= */
-/* NAVBAR */
-/* ========================= */
+/* PANELS */
 
-.navbar{
-    width:100%;
-    padding:18px 20px;
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:#091225dd;
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #8f5fff44;
+.panel-section{
+    margin-top:-40px;
+    position:relative;
+    z-index:5;
+    padding-bottom:40px;
 }
 
-.nav-inner{
-    max-width:1400px;
-    margin:auto;
+.panel-grid{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:16px;
+    gap:40px;
+    padding:0 20px;
 }
 
-.nav-inner a{
-    text-decoration:none;
-    color:white;
-    padding:12px 22px;
-    border-radius:14px;
-    background:#101b36;
-    border:2px solid #7f4fff;
-    transition:0.2s;
-    font-weight:600;
-}
-
-.nav-inner a:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 18px #8c63ff88;
-    background:#18284f;
-}
-
-/* ========================= */
-/* PANELS */
-/* ========================= */
-
-.panel-links{
-    max-width:1450px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:28px;
-    padding:50px 30px;
-}
-
-.panel-links a{
+.panel-grid a img{
+    width:190px;
     transition:0.25s;
+    filter:drop-shadow(0 0 12px rgba(255,255,255,0.08));
 }
 
-.panel-links a:hover{
-    transform:translateY(-8px) scale(1.03);
-    filter:drop-shadow(0 0 20px #9f6bff88);
+.panel-grid a img:hover{
+    transform:translateY(-10px) scale(1.06);
+    filter:
+    drop-shadow(0 0 18px #9c5cff)
+    drop-shadow(0 0 30px rgba(156,92,255,0.5));
 }
 
-.panel-links img{
-    width:100%;
-    display:block;
-}
-
-/* ========================= */
-/* SEARCH */
-/* ========================= */
-
-.search-box{
-    max-width:1200px;
-    margin:10px auto 50px auto;
-    padding:0 25px;
-}
-
-.search-box input{
-    width:100%;
-    padding:18px 24px;
-    border:none;
-    border-radius:18px;
-    background:#111b35;
-    color:white;
-    font-size:17px;
-    outline:none;
-    border:2px solid transparent;
-    transition:0.2s;
-}
-
-.search-box input:focus{
-    border-color:#8e59ff;
-    box-shadow:0 0 20px #8e59ff44;
-}
-
-/* ========================= */
-/* CONTENT */
-/* ========================= */
-
-.container{
-    max-width:1450px;
-    margin:auto;
-    padding:0 30px 80px 30px;
-}
-
-.section{
-    margin-bottom:80px;
-}
-
-.section-title{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-bottom:30px;
-    font-size:38px;
-    font-weight:700;
-    color:#ff8cff;
-}
-
-/* ========================= */
-/* COMMAND GRID */
-/* ========================= */
-
-.command-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
-    gap:22px;
-}
-
-.command-card{
-    background:#101a33;
-    border:2px solid #7f4fff;
-    border-radius:24px;
-    padding:24px;
-    transition:0.2s;
-}
-
-.command-card:hover{
-    transform:translateY(-5px);
-    box-shadow:
-    0 0 25px #7f4fff55,
-    0 0 40px #00cfff22;
-}
-
-.command-name{
-    font-size:24px;
-    font-weight:700;
-    color:#66ddff;
-    margin-bottom:12px;
-}
-
-.command-prefix{
-    display:inline-block;
-    background:#1a294d;
-    color:#d5e8ff;
-    padding:10px 14px;
-    border-radius:12px;
-    margin-bottom:14px;
-    font-size:14px;
-    word-break:break-word;
-}
-
-.command-description{
-    color:#d7d7d7;
-    line-height:1.7;
-    font-size:15px;
-}
-
-/* ========================= */
 /* ABOUT */
-/* ========================= */
 
-.about-box{
-    background:#101a33;
-    border:2px solid #ff7af5;
-    border-radius:28px;
-    padding:35px;
+.about{
+    max-width:1200px;
+    margin:90px auto;
+    padding:40px;
+    background:rgba(16,24,58,0.82);
+    border:2px solid #9c5cff;
+    border-radius:30px;
+    box-shadow:
+    0 0 25px rgba(156,92,255,0.2);
+    backdrop-filter:blur(8px);
+}
+
+.about h2{
+    font-size:42px;
+    margin-bottom:25px;
+    background:linear-gradient(90deg,#ff9df7,#6bc7ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.about p{
+    font-size:20px;
     line-height:1.9;
-    color:#f1f1f1;
-    font-size:18px;
+    color:#e6e6e6;
+    margin-bottom:22px;
 }
 
-/* ========================= */
-/* RULES */
-/* ========================= */
-
-.rules-box{
-    margin-top:20px;
-    background:#101a33;
-    border:2px solid #ff7af5;
-    border-radius:28px;
-    padding:35px;
-}
-
-.rules-box ul{
-    list-style:none;
-}
-
-.rules-box li{
-    margin-bottom:18px;
-    font-size:18px;
-    color:#f0f0f0;
-}
-
-/* ========================= */
 /* FOOTER */
-/* ========================= */
 
 .footer{
+    margin-top:70px;
+    padding:35px;
     text-align:center;
-    padding:60px 20px;
-    color:#aaa;
-    font-size:16px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    color:#9ea6d4;
+    font-size:18px;
 }
 
-.footer img{
-    width:90px;
-    margin-bottom:18px;
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+    height:620px;
 }
 
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
+.hero h1{
+    font-size:56px;
+}
 
-@media(max-width:768px){
+.hero p{
+    font-size:22px;
+}
 
-    .hero{
-        height:650px;
-    }
+.panel-grid a img{
+    width:150px;
+}
 
-    .hero h1{
-        font-size:50px;
-    }
+.about{
+    margin:60px 20px;
+    padding:25px;
+}
 
-    .hero p{
-        font-size:17px;
-    }
+.about h2{
+    font-size:32px;
+}
 
-    .section-title{
-        font-size:28px;
-    }
-
-    .command-grid{
-        grid-template-columns:1fr;
-    }
+.about p{
+    font-size:17px;
+}
 
 }
 
 </style>
 </head>
-
 <body>
-
-<!-- HERO -->
 
 <section class="hero">
 
-    <img class="banner" src="Profil_Banner.png">
+<div class="hero-content">
 
-    <div class="hero-overlay">
+<img src="Profile_Picture (2).png" class="profile-pic">
 
-        <img class="profile-pic" src="Profile_Picture (2).png">
+<h1>PawEmpire</h1>
 
-        <h1>PawEmpire</h1>
-
-        <p>Official ScienceGeek00 Community Hub</p>
-
-    </div>
-
-</section>
-
-<!-- NAVBAR -->
-
-<div class="navbar">
-
-    <div class="nav-inner">
-
-        <a href="#about">About</a>
-        <a href="commands.html">Commands</a>
-        <a href="#rules">Rules</a>
-        <a href="https://discord.gg/DdwHBamfbQ" target="_blank">Discord</a>
-        <a href="https://streamelements.com/sciencegeek00/tip" target="_blank">Donate</a>
-
-    </div>
+<p>Official ScienceGeek00 Community Hub</p>
 
 </div>
 
-<!-- PANELS -->
-
-<section class="panel-links">
-
-    <a href="#about">
-        <img src="About_Panel.png">
-    </a>
-
-    <a href="commands.html">
-        <img src="Frame5_ZackZack.png">
-    </a>
-
-    <a href="https://discord.gg/DdwHBamfbQ" target="_blank">
-        <img src="Discord_Panel.png">
-    </a>
-
-    <a href="https://streamelements.com/sciencegeek00/tip" target="_blank">
-        <img src="Donate_Panel.png">
-    </a>
-
-    <a href="#rules">
-        <img src="Rules_Panel.png">
-    </a>
-
-    <a href="https://www.twitch.tv/team/w00lfpack" target="_blank">
-        <img src="w00lfpack_Panel.png">
-    </a>
-
-    <a href="https://www.twitch.tv/team/mcu" target="_blank">
-        <img src="MCU_Panel.png">
-    </a>
-
 </section>
 
-<!-- SEARCH -->
+<section class="panel-section">
 
-<div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search commands...">
-</div>
+<div class="panel-grid">
 
-<!-- CONTENT -->
+<a href="about.html">
+<img src="About_Panel.png">
+</a>
 
-<div class="container">
+<a href="https://discord.gg/DdwHBamfbQ" target="_blank">
+<img src="Discord_Panel.png">
+</a>
 
-<!-- ABOUT -->
+<a href="rules.html">
+<img src="Rules_Panel.png">
+</a>
 
-<section class="section" id="about">
+<a href="https://streamelements.com/sciencegeek00/tip" target="_blank">
+<img src="Donate_Panel.png">
+</a>
 
-    <div class="section-title">
-        <img src="Frame5_ZackZack.png" width="70">
-        About PawEmpire
-    </div>
+<a href="https://www.twitch.tv/team/w00lfpack" target="_blank">
+<img src="w00lfpack_Panel.png">
+</a>
 
-    <div class="about-box">
+<a href="https://www.twitch.tv/team/mcu" target="_blank">
+<img src="MCU-Panel.png">
+</a>
 
-        Welcome to the PawEmpire ✨<br><br>
-
-        Cozy chaos, Marbles on Stream, viewer games, loyalty systems,
-        community events and LOTS of cat energy 🐾<br><br>
-
-        This website contains all important commands,
-        community links and features for the ScienceGeek00 stream.
-
-    </div>
-
-</section>
-
-<!-- COMMANDS PREVIEW -->
-
-<section class="section">
-
-    <div class="section-title">
-        🖥️ Command Hub
-    </div>
-
-    <div class="command-grid">
-
-        <div class="command-card">
-            <div class="command-name">Viewer Commands</div>
-            <div class="command-prefix">Fun • Chaos • Community</div>
-            <div class="command-description">
-                Commands for interaction, vibes, memes, raids, love and pure PawEmpire chaos.
-            </div>
-        </div>
-
-        <div class="command-card">
-            <div class="command-name">Loyalty System</div>
-            <div class="command-prefix">Points • Gamble • Duel</div>
-            <div class="command-description">
-                Earn PawPoints, duel viewers, gamble points and dominate the leaderboard.
-            </div>
-        </div>
-
-        <div class="command-card">
-            <div class="command-name">PawDrop Minigame</div>
-            <div class="command-prefix">Patchinko • Jackpot • Luck</div>
-            <div class="command-description">
-                Compete in the PawDrop machine and fight for huge rewards and rankings.
-            </div>
-        </div>
-
-        <div class="command-card">
-            <div class="command-name">Watchtime & Lurk</div>
-            <div class="command-prefix">Lurk • AFK • Stats</div>
-            <div class="command-description">
-                Track your watchtime, become a lurk legend and flex your dedication.
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- RULES -->
-
-<section class="section" id="rules">
-
-    <div class="section-title">
-        📜 Stream Rules
-    </div>
-
-    <div class="rules-box">
-
-        <ul>
-
-            <li>🌍 Only Ger/Eng Chat</li>
-            <li>🚫 Keine anstößigen Kommentare</li>
-            <li>📢 Keine Eigenwerbung</li>
-            <li>🔒 Keine Fragen zum Privatleben</li>
-            <li>🛡️ Gib keine persönlichen Daten heraus</li>
-            <li>⚠️ Keine politischen oder religiösen Themen</li>
-
-        </ul>
-
-    </div>
-
-</section>
+<a href="https://www.twitch.tv/sciencegeek00" target="_blank">
+<img src="Frame5_ZackZack.png">
+</a>
 
 </div>
 
-<!-- FOOTER -->
+</section>
 
-<footer class="footer">
+<section class="about">
 
-    <img src="WhiteMoon-Cat-HI2-400px.gif">
+<h2>✨ 🎮 Meow & Welcome to PawEmpire! 🐱 ✨</h2>
 
-    <p>Built for the PawEmpire ✨</p>
+<p>
+Only MoS and fluffy vibes around here.
+</p>
 
-</footer>
+<p>
+✨ Welcome to PawEmpire,
+<br><br>
+Just call me Science or Geek! ✨
+<br><br>
+Do you like cats, MoS, chaos, bad jokes, hype moments and cozy streams?
+Then you've come to the RIGHT place!
+</p>
 
-<script>
+<p>
+This community is fully focused on MarblesOnStream (MoS).
+From chill races to absolute marble chaos — everything here is about having fun together and creating a place where viewers can relax for a few hours.
+</p>
 
-const searchInput = document.getElementById("searchInput");
+<p>
+Whether you're an active chatter, a hardcore grinder, a random marble enjoyer or just lurking quietly in the background:
+you're welcome here.
+</p>
 
-searchInput.addEventListener("keyup", function() {
+<p>
+The stream is built around community interaction, custom games, viewer engagement and LOTS of marble madness.
+There’s always music running, random chaos happening and usually at least one marble flying off the track.
+</p>
 
-    const value = this.value.toLowerCase();
+<p>
+PawEmpire is all about good vibes, fun competition and creating a place where people actually enjoy hanging out together.
+So grab your marble, lean back and enjoy the ride. 🐾
+</p>
 
-    const cards = document.querySelectorAll(".command-card");
+</section>
 
-    cards.forEach(card => {
+<div class="footer">
 
-        const text = card.innerText.toLowerCase();
+✨ Built for the PawEmpire Community ✨
 
-        if(text.includes(value)){
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
-
-    });
-
-});
-
-</script>
+</div>
 
 </body>
 </html>
