@@ -35,6 +35,8 @@ padding:70px 20px 40px;
 backdrop-filter:blur(3px);
 background:rgba(0,0,0,0.35);
 border-bottom:1px solid rgba(160,80,255,0.35);
+position:relative;
+overflow:hidden;
 }
 
 .hero img.profile{
@@ -218,6 +220,27 @@ line-height:1.8;
 color:#ffe7ff;
 }
 
+/* WEBSITE BUTTON */
+
+.website-button{
+display:inline-block;
+margin-top:20px;
+padding:18px 34px;
+border-radius:18px;
+background:linear-gradient(90deg,#9c4dff,#5ab8ff);
+color:white;
+font-size:24px;
+font-weight:bold;
+text-decoration:none;
+transition:0.25s;
+box-shadow:0 0 20px rgba(140,80,255,0.35);
+}
+
+.website-button:hover{
+transform:translateY(-4px) scale(1.03);
+box-shadow:0 0 30px rgba(140,80,255,0.6);
+}
+
 /* FOOTER */
 
 .footer{
@@ -277,6 +300,11 @@ display:none;
 .corner-left,
 .corner-right{
 width:100px;
+}
+
+.website-button{
+font-size:20px;
+padding:15px 25px;
 }
 
 }
@@ -485,6 +513,21 @@ The Marble Family is all about supporting each other, having fun together and bu
 </p>
 
 <p>
+✨ Want even MORE Marble chaos?<br>
+Check out the official Marble Family website:
+</p>
+
+<div style="text-align:center;">
+
+<a href="https://www.marble-family.de/" target="_blank" class="website-button">
+
+➡️ Visit marble-family.de
+
+</a>
+
+</div>
+
+<p style="margin-top:40px;">
 ✨ Want to become part of the family?<br>
 Join the Discord and experience the chaos yourself:
 </p>
