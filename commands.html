@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PawEmpire Commands | ScienceGeek00</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:
+linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.92)),
+url('Profil_Banner.png');
+background-size:cover;
+background-position:center top;
+background-attachment:fixed;
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:70px 20px 40px;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(5px);
+border-bottom:1px solid rgba(160,80,255,0.35);
+position:relative;
+overflow:hidden;
+}
+
+.hero img.profile{
+width:130px;
+height:130px;
+border-radius:50%;
+border:4px solid #a855f7;
+box-shadow:0 0 30px rgba(168,85,247,0.7);
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:900;
+background:linear-gradient(90deg,#ff8de1,#79bfff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:28px;
+color:#e6e6e6;
+}
+
+/* FLOATING EMOTES */
+
+.floating-emotes{
+position:absolute;
+width:100%;
+top:20px;
+left:0;
+pointer-events:none;
+}
+
+.floating-emotes img{
+position:absolute;
+opacity:0.9;
+filter:drop-shadow(0 0 12px rgba(180,100,255,0.5));
+}
+
+.emote-left{
+left:4%;
+top:20px;
+width:110px;
+transform:rotate(-8deg);
+}
+
+.emote-right{
+right:4%;
+top:20px;
+width:120px;
+transform:rotate(8deg);
+}
+
+/* NAVIGATION */
+
+.nav-section{
+padding:40px 20px;
+background:rgba(5,10,40,0.95);
+border-top:1px solid rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.panel-grid{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:35px;
+flex-wrap:wrap;
+}
+
+.panel-grid a img{
+width:165px;
+transition:0.25s ease;
+filter:drop-shadow(0 0 12px rgba(0,0,0,0.5));
+}
+
+.panel-grid a img:hover{
+transform:translateY(-8px) scale(1.05);
+filter:drop-shadow(0 0 25px rgba(170,90,255,0.8));
+}
+
+/* SEARCH */
+
+.search-wrapper{
+max-width:900px;
+margin:45px auto 10px;
+padding:0 20px;
+}
+
+#searchInput{
+width:100%;
+padding:20px 25px;
+border-radius:18px;
+border:2px solid #914cff;
+background:rgba(10,15,45,0.95);
+color:white;
+font-size:22px;
+outline:none;
+box-shadow:0 0 20px rgba(140,80,255,0.25);
+}
+
+#searchInput::placeholder{
+color:#bfbfbf;
+}
+
+/* CONTENT */
+
+.content{
+max-width:1500px;
+margin:auto;
+padding:40px 20px 80px;
+}
+
+/* SECTIONS */
+
+.section{
+margin-bottom:80px;
+}
+
+.section-title{
+font-size:44px;
+font-weight:900;
+margin-bottom:35px;
+background:linear-gradient(90deg,#ff8de1,#79bfff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+/* GRID */
+
+.command-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+/* COMMAND CARD */
+
+.command-card{
+background:rgba(8,12,45,0.95);
+border:2px solid #934fff;
+border-radius:24px;
+padding:28px;
+transition:0.25s ease;
+box-shadow:0 0 20px rgba(120,50,255,0.15);
+position:relative;
+overflow:hidden;
+}
+
+.command-card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 28px rgba(160,90,255,0.35);
+border-color:#bc8cff;
+}
+
+.command-name{
+font-size:30px;
+font-weight:900;
+margin-bottom:12px;
+color:white;
+}
+
+.command-prefix{
+display:inline-block;
+font-size:18px;
+padding:10px 14px;
+border-radius:12px;
+background:rgba(100,120,255,0.12);
+border:1px solid rgba(130,160,255,0.4);
+color:#87c8ff;
+margin-bottom:18px;
+word-break:break-word;
+}
+
+.command-description{
+font-size:21px;
+line-height:1.6;
+color:#ececec;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:35px;
+font-size:19px;
+background:rgba(0,0,0,0.45);
+border-top:1px solid rgba(255,255,255,0.05);
+color:#d5d5d5;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:46px;
+}
+
+.hero p{
+font-size:22px;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.command-name{
+font-size:24px;
+}
+
+.command-description{
+font-size:18px;
+}
+
+.command-prefix{
+font-size:15px;
+}
+
+.panel-grid a img{
+width:125px;
+}
+
+.emote-left,
+.emote-right{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="floating-emotes">
+
+<img src="Frame5_ZackZack.png" class="emote-left">
+
+<img src="WhiteMoon-Cat-HI2-400px.gif" class="emote-right">
+
+</div>
+
+<img src="Profile_Picture (2).png" class="profile">
+
+<h1>PawEmpire Commands</h1>
+
+<p>All Commands • Chaos • Marble Madness • Community Fun</p>
+
+</section>
+
+<!-- PANELS -->
+
+<section class="nav-section">
+
+<div class="panel-grid">
+
+<a href="index.html#about">
+<img src="About_Panel.png">
+</a>
+
+<a href="https://discord.gg/DdwHBamfbQ" target="_blank">
+<img src="Discord_Panel.png">
+</a>
+
+<a href="index.html#rules">
+<img src="Rules_Panel.png">
+</a>
+
+<a href="https://streamelements.com/sciencegeek00/tip" target="_blank">
+<img src="Donate_Panel.png">
+</a>
+
+<a href="commands.html">
+<img src="Commands_Panel.png">
+</a>
+
+<a href="https://www.twitch.tv/team/w00lfpack" target="_blank">
+<img src="w00lfpack_Panel.png">
+</a>
+
+<a href="https://www.twitch.tv/team/mcu" target="_blank">
+<img src="MCU-Panel.png">
+</a>
+
+<a href="https://www.twitch.tv/sciencegeek00" target="_blank">
+<img src="Twitch_Panel.png">
+</a>
+
+</div>
+
+</section>
+
+<!-- SEARCH -->
+
+<div class="search-wrapper">
+
+<input type="text" id="searchInput" placeholder="🔎 Search commands...">
+
+</div>
+
+<!-- CONTENT -->
+
+<div class="content">
+
+<!-- VIEWER COMMANDS -->
+
+<section class="section">
+
+<div class="section-title">
+🎉 Viewer Commands
+</div>
+
+<div class="command-grid">
+
+<div class="command-card">
+<div class="command-name">Aldiscon.de</div>
+<span class="command-prefix">!aldi • !aldiscon</span>
+<div class="command-description">
+Here you'll find EVERYTHING about MarblesOnStream.
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">CreatorCode</div>
+<span class="command-prefix">!code • !creatorcode • !creator</span>
+<div class="command-description">
+Support me and earn Marble Money / Tournament Coins ✨
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">ChatLove</div>
+<span class="command-prefix">!chatlove • !chatlob • !chatloben</span>
+<div class="command-description">
+Show some LOVE to the chat 💜
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">VIPLove</div>
+<span class="command-prefix">!viplove • !viplob • !viploben</span>
+<div class="command-description">
+Show some LOVE to the VIPs 👑
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">ModLove</div>
+<span class="command-prefix">!modlove • !modlob • !modsloben</span>
+<div class="command-description">
+Show some LOVE to the moderators 🛡️
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">ScienceLove</div>
+<span class="command-prefix">!streamerloben • !sciencelob</span>
+<div class="command-description">
+Show some LOVE to me 💙
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Dance</div>
+<span class="command-prefix">!dance</span>
+<div class="command-description">
+Dance together with the music 🎶
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Party</div>
+<span class="command-prefix">!party</span>
+<div class="command-description">
+Start a HUGE PawEmpire party 🎉
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Discord</div>
+<span class="command-prefix">!dc • !discord</span>
+<div class="command-description">
+Shows the link to our Discord server.
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Raid</div>
+<span class="command-prefix">!raid1</span>
+<div class="command-description">
+Shows the German raid message 🇩🇪
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">eRaid</div>
+<span class="command-prefix">!eRaid • !raid2</span>
+<div class="command-description">
+Shows the English raid message 🇬🇧
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Hug</div>
+<span class="command-prefix">!hug @user</span>
+<div class="command-description">
+Take somebody you REALLY LOVE into your arms 🫂
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Knutschen</div>
+<span class="command-prefix">!knutsch @user • !küsseln @user</span>
+<div class="command-description">
+Give someone a BIG kiss 💋
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Liebe</div>
+<span class="command-prefix">!liebe @user</span>
+<div class="command-description">
+Show how much you LOVE somebody 💖
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Pedro</div>
+<span class="command-prefix">!pedro</span>
+<div class="command-description">
+Plays PEDRO music — LET'S VIBE 🎵
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Verprügel</div>
+<span class="command-prefix">!verprügel @user • !slap @user</span>
+<div class="command-description">
+Slap a specific viewer 💥
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">IQ</div>
+<span class="command-prefix">!iq • !kluk • !schlau</span>
+<div class="command-description">
+Show how SMART you are 🧠
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Commands</div>
+<span class="command-prefix">!commands • !cmds</span>
+<div class="command-description">
+Shows ALL available commands.
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Lurk</div>
+<span class="command-prefix">!lurk • !afk</span>
+<div class="command-description">
+Shows that you are going into lurk mode 👀
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Unlurk</div>
+<span class="command-prefix">!unlurk • !back</span>
+<div class="command-description">
+Shows that you are BACK ✨
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">VIP-Check</div>
+<span class="command-prefix">!vipcheck • !checkvip</span>
+<div class="command-description">
+Check how much longer you will stay VIP 👑
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Watchtime</div>
+<span class="command-prefix">!watchtime</span>
+<div class="command-description">
+Check how long you have watched the stream ⏱️
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">WatchtimeLeaderboard</div>
+<span class="command-prefix">!wtleaderboard • !watchtimeleaderboard</span>
+<div class="command-description">
+Shows the Watchtime leaderboard 🏆
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Followage</div>
+<span class="command-prefix">!followage</span>
+<div class="command-description">
+Check how long you have followed the channel 💜
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- LOYALTY -->
+
+<section class="section">
+
+<div class="section-title">
+💰 Loyalty Points
+</div>
+
+<div class="command-grid">
+
+<div class="command-card">
+<div class="command-name">Duel</div>
+<span class="command-prefix">!duel @user [amount]</span>
+<div class="command-description">
+Fight another viewer for Loyalty Points ⚔️
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Gamble</div>
+<span class="command-prefix">!gamble [amount]</span>
+<div class="command-description">
+Gamble your Loyalty Points 🎲
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Enter Rumble</div>
+<span class="command-prefix">!enterRumble</span>
+<div class="command-description">
+Enter the viewer rumble battle 🔥
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Scratch Card</div>
+<span class="command-prefix">!scratchCard • !buyScratchCards</span>
+<div class="command-description">
+Buy yourself a scratch card 💸
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Points</div>
+<span class="command-prefix">!points</span>
+<div class="command-description">
+Check how many Loyalty Points you have.
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Give Points</div>
+<span class="command-prefix">!givePoints</span>
+<div class="command-description">
+Give your Loyalty Points to another viewer ✨
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Leaderboard</div>
+<span class="command-prefix">!pointsLeaderboard</span>
+<div class="command-description">
+Shows who has the MOST Loyalty Points 👑
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- PAWDROP -->
+
+<section class="section">
+
+<div class="section-title">
+🐾 PawEmpire Patchinko Machine
+</div>
+
+<div class="command-grid">
+
+<div class="command-card">
+<div class="command-name">MyRank</div>
+<span class="command-prefix">!myRank • !dropRank</span>
+<div class="command-description">
+Check your position in the Patchinko game 🏆
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Prices</div>
+<span class="command-prefix">!prizes • !prices</span>
+<div class="command-description">
+Shows all available prizes 🎁
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">CashOut</div>
+<span class="command-prefix">!cashout</span>
+<div class="command-description">
+Claim your winnings 💰
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Stats</div>
+<span class="command-prefix">!stats</span>
+<div class="command-description">
+Show your Patchinko statistics 📊
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">LifetimeDROP</div>
+<span class="command-prefix">!lifetime • !lifetimeDrops</span>
+<div class="command-description">
+Shows how good you are overall ✨
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">Top10</div>
+<span class="command-prefix">!top10 • !topDrop</span>
+<div class="command-description">
+Shows the current TOP 10 players 🔥
+</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">TopLifetime</div>
+<span class="command-prefix">!toplifetime</span>
+<div class="command-description">
+Shows the BEST players of ALL TIME 👑
+</div>
+</div>
+
+</div>
+</section>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+Built for the PawEmpire ✨
+
+</footer>
+
+<!-- SEARCH SCRIPT -->
+
+<script>
+
+const searchInput = document.getElementById('searchInput');
+
+searchInput.addEventListener('keyup', function(){
+
+let filter = searchInput.value.toLowerCase();
+
+let cards = document.querySelectorAll('.command-card');
+
+cards.forEach(card => {
+
+let text = card.innerText.toLowerCase();
+
+if(text.includes(filter)){
+card.style.display = "";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
