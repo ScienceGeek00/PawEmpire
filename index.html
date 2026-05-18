@@ -60,6 +60,36 @@ font-size:30px;
 color:#e7e7e7;
 }
 
+/* FLOATING EMOTES */
+
+.floating-emotes{
+position:absolute;
+width:100%;
+top:25px;
+left:0;
+pointer-events:none;
+}
+
+.floating-emotes img{
+position:absolute;
+opacity:0.9;
+filter:drop-shadow(0 0 10px rgba(180,100,255,0.5));
+}
+
+.emote-left{
+left:4%;
+top:30px;
+width:110px;
+transform:rotate(-8deg);
+}
+
+.emote-right{
+right:4%;
+top:20px;
+width:120px;
+transform:rotate(8deg);
+}
+
 /* PANELS */
 
 .panel-section{
@@ -104,6 +134,8 @@ padding:40px;
 margin-bottom:50px;
 box-shadow:0 0 35px rgba(110,0,255,0.22);
 backdrop-filter:blur(8px);
+position:relative;
+overflow:hidden;
 }
 
 .section-image{
@@ -130,6 +162,28 @@ font-size:28px;
 line-height:1.9;
 margin-bottom:28px;
 color:#f3f3f3;
+}
+
+/* EXTRA EMOTES */
+
+.corner-emote{
+position:absolute;
+opacity:0.18;
+pointer-events:none;
+}
+
+.corner-left{
+left:-20px;
+bottom:-20px;
+width:160px;
+transform:rotate(-10deg);
+}
+
+.corner-right{
+right:-20px;
+top:-20px;
+width:160px;
+transform:rotate(10deg);
 }
 
 /* RULES */
@@ -215,6 +269,16 @@ width:130px;
 width:170px;
 }
 
+.emote-left,
+.emote-right{
+display:none;
+}
+
+.corner-left,
+.corner-right{
+width:100px;
+}
+
 }
 
 </style>
@@ -225,6 +289,14 @@ width:170px;
 <!-- HERO -->
 
 <section class="hero">
+
+<div class="floating-emotes">
+
+<img src="Frame5_ZackZack.png" class="floating-emote emote-left">
+
+<img src="WhiteMoon-Cat-HI2-400px.gif" class="floating-emote emote-right">
+
+</div>
 
 <img src="Profile_Picture (2).png" class="profile">
 
@@ -256,6 +328,10 @@ width:170px;
 <img src="Donate_Panel.png">
 </a>
 
+<a href="commands.html">
+<img src="Commands_Panel.png">
+</a>
+
 <a href="https://www.twitch.tv/team/w00lfpack" target="_blank">
 <img src="w00lfpack_Panel.png">
 </a>
@@ -279,6 +355,8 @@ width:170px;
 <!-- ABOUT -->
 
 <section class="info-box" id="about">
+
+<img src="PawEmpire_500x 500px.png" class="corner-emote corner-right">
 
 <div class="section-image">
 <img src="About_Panel.png">
@@ -329,6 +407,8 @@ So grab your marble, lean back and enjoy the ride. 🐾
 <!-- RULES -->
 
 <section class="info-box" id="rules">
+
+<img src="PawEmpire_500x 500px.png" class="corner-emote corner-left">
 
 <div class="rules-box">
 
