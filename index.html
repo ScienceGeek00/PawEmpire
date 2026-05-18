@@ -3,202 +3,244 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PawEmpire</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>PawEmpire | ScienceGeek00</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:
-    radial-gradient(circle at top,#101d46 0%,#04081d 55%,#02040f 100%);
-    color:white;
-    overflow-x:hidden;
+font-family:Arial, sans-serif;
+background:
+linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+url('Profil_Banner.png');
+background-size:cover;
+background-position:center top;
+background-attachment:fixed;
+color:white;
+overflow-x:hidden;
 }
 
 /* HERO */
 
 .hero{
-    position:relative;
-    width:100%;
-    height:720px;
-    background:
-    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.65)),
-    url("Profil_Banner.png");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+text-align:center;
+padding:70px 20px 40px;
+backdrop-filter:blur(3px);
+background:rgba(0,0,0,0.35);
+border-bottom:1px solid rgba(160,80,255,0.35);
 }
 
-.hero-content{
-    backdrop-filter:blur(6px);
-    padding:30px;
-    border-radius:25px;
-}
-
-.profile-pic{
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    border:5px solid #9c5cff;
-    box-shadow:
-    0 0 25px #9c5cff,
-    0 0 60px rgba(156,92,255,0.5);
-    margin-bottom:20px;
+.hero img.profile{
+width:130px;
+height:130px;
+border-radius:50%;
+border:4px solid #a855f7;
+box-shadow:0 0 30px rgba(168,85,247,0.7);
+margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:82px;
-    font-weight:700;
-    background:linear-gradient(90deg,#b76dff,#6bc7ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+font-size:72px;
+font-weight:900;
+background:linear-gradient(90deg,#d16fff,#71c7ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:10px;
 }
 
 .hero p{
-    margin-top:10px;
-    font-size:28px;
-    color:#d8d8d8;
+font-size:30px;
+color:#e7e7e7;
 }
 
 /* PANELS */
 
 .panel-section{
-    margin-top:-40px;
-    position:relative;
-    z-index:5;
-    padding-bottom:40px;
+padding:45px 20px;
+background:rgba(3,7,35,0.92);
+border-top:1px solid rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .panel-grid{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:40px;
-    padding:0 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
 }
 
 .panel-grid a img{
-    width:190px;
-    transition:0.25s;
-    filter:drop-shadow(0 0 12px rgba(255,255,255,0.08));
+width:170px;
+transition:0.25s ease;
+filter:drop-shadow(0 0 10px rgba(0,0,0,0.5));
 }
 
 .panel-grid a img:hover{
-    transform:translateY(-10px) scale(1.06);
-    filter:
-    drop-shadow(0 0 18px #9c5cff)
-    drop-shadow(0 0 30px rgba(156,92,255,0.5));
+transform:translateY(-8px) scale(1.05);
+filter:drop-shadow(0 0 25px rgba(170,90,255,0.8));
 }
 
-/* ABOUT */
+/* CONTENT BOX */
 
-.about{
-    max-width:1200px;
-    margin:90px auto;
-    padding:40px;
-    background:rgba(16,24,58,0.82);
-    border:2px solid #9c5cff;
-    border-radius:30px;
-    box-shadow:
-    0 0 25px rgba(156,92,255,0.2);
-    backdrop-filter:blur(8px);
+.content-wrapper{
+max-width:1250px;
+margin:auto;
+padding:50px 25px 80px;
 }
 
-.about h2{
-    font-size:42px;
-    margin-bottom:25px;
-    background:linear-gradient(90deg,#ff9df7,#6bc7ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+.info-box{
+background:rgba(7,12,45,0.93);
+border:2px solid #9c4dff;
+border-radius:28px;
+padding:40px;
+margin-bottom:50px;
+box-shadow:0 0 35px rgba(110,0,255,0.22);
+backdrop-filter:blur(8px);
 }
 
-.about p{
-    font-size:20px;
-    line-height:1.9;
-    color:#e6e6e6;
-    margin-bottom:22px;
+.info-box h2{
+font-size:52px;
+margin-bottom:30px;
+background:linear-gradient(90deg,#ff8de1,#79bfff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.info-box p{
+font-size:28px;
+line-height:1.9;
+margin-bottom:28px;
+color:#f3f3f3;
+}
+
+/* RULES */
+
+.rules-box{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:40px;
+}
+
+.rules-box img{
+width:280px;
+}
+
+.rules-list{
+flex:1;
+min-width:300px;
+}
+
+.rules-list ul{
+padding-left:25px;
+}
+
+.rules-list li{
+font-size:28px;
+margin-bottom:18px;
+line-height:1.6;
+font-weight:bold;
+}
+
+.rules-end{
+margin-top:25px;
+font-size:26px;
+line-height:1.8;
+color:#ffe7ff;
 }
 
 /* FOOTER */
 
 .footer{
-    margin-top:70px;
-    padding:35px;
-    text-align:center;
-    border-top:1px solid rgba(255,255,255,0.1);
-    color:#9ea6d4;
-    font-size:18px;
+text-align:center;
+padding:30px;
+font-size:20px;
+background:rgba(0,0,0,0.5);
+border-top:1px solid rgba(255,255,255,0.05);
+color:#cfcfcf;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
 
-.hero{
-    height:620px;
-}
-
 .hero h1{
-    font-size:56px;
+font-size:48px;
 }
 
 .hero p{
-    font-size:22px;
+font-size:22px;
+}
+
+.info-box{
+padding:25px;
+}
+
+.info-box h2{
+font-size:36px;
+}
+
+.info-box p{
+font-size:21px;
+}
+
+.rules-list li{
+font-size:21px;
+}
+
+.rules-end{
+font-size:20px;
 }
 
 .panel-grid a img{
-    width:150px;
+width:130px;
 }
 
-.about{
-    margin:60px 20px;
-    padding:25px;
+.rules-box{
+justify-content:center;
+text-align:left;
 }
 
-.about h2{
-    font-size:32px;
-}
-
-.about p{
-    font-size:17px;
+.rules-box img{
+width:220px;
 }
 
 }
 
 </style>
 </head>
+
 <body>
+
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-content">
-
-<img src="Profile_Picture (2).png" class="profile-pic">
+<img src="Profile_Picture (2).png" class="profile">
 
 <h1>PawEmpire</h1>
 
 <p>Official ScienceGeek00 Community Hub</p>
 
-</div>
-
 </section>
+
+<!-- PANELS -->
 
 <section class="panel-section">
 
 <div class="panel-grid">
 
-<a href="about.html">
+<a href="#about">
 <img src="About_Panel.png">
 </a>
 
@@ -206,7 +248,7 @@ body{
 <img src="Discord_Panel.png">
 </a>
 
-<a href="rules.html">
+<a href="#rules">
 <img src="Rules_Panel.png">
 </a>
 
@@ -223,14 +265,20 @@ body{
 </a>
 
 <a href="https://www.twitch.tv/sciencegeek00" target="_blank">
-<img src="Frame5_ZackZack.png">
+<img src="Twitch_Panel.png">
 </a>
 
 </div>
 
 </section>
 
-<section class="about">
+<!-- CONTENT -->
+
+<div class="content-wrapper">
+
+<!-- ABOUT -->
+
+<section class="info-box" id="about">
 
 <h2>✨ 🎮 Meow & Welcome to PawEmpire! 🐱 ✨</h2>
 
@@ -240,16 +288,21 @@ Only MoS and fluffy vibes around here.
 
 <p>
 ✨ Welcome to PawEmpire,
-<br><br>
+</p>
+
+<p>
 Just call me Science or Geek! ✨
-<br><br>
+</p>
+
+<p>
 Do you like cats, MoS, chaos, bad jokes, hype moments and cozy streams?
 Then you've come to the RIGHT place!
 </p>
 
 <p>
 This community is fully focused on MarblesOnStream (MoS).
-From chill races to absolute marble chaos — everything here is about having fun together and creating a place where viewers can relax for a few hours.
+From chill races to absolute marble chaos —
+everything here is about having fun together and creating a place where viewers can relax for a few hours.
 </p>
 
 <p>
@@ -259,7 +312,7 @@ you're welcome here.
 
 <p>
 The stream is built around community interaction, custom games, viewer engagement and LOTS of marble madness.
-There’s always music running, random chaos happening and usually at least one marble flying off the track.
+There's always music running, random chaos happening and usually at least one marble flying off the track.
 </p>
 
 <p>
@@ -269,11 +322,47 @@ So grab your marble, lean back and enjoy the ride. 🐾
 
 </section>
 
-<div class="footer">
+<!-- RULES -->
 
-✨ Built for the PawEmpire Community ✨
+<section class="info-box" id="rules">
+
+<div class="rules-box">
+
+<img src="Rules_Panel.png">
+
+<div class="rules-list">
+
+<ul>
+<li>Only [Ger/Eng] Chat!</li>
+<li>Keine anstößigen Kommentare!</li>
+<li>Keine Eigenwerbung!</li>
+<li>Keine Fragen in irgendeiner Weise zum Privatleben!</li>
+<li>Gib keine persönlichen Daten heraus!</li>
+<li>Keine politischen und religiösen Themen!</li>
+</ul>
+
+<div class="rules-end">
+
+Da wir im Chat alle unseren Spaß haben wollen<br>
+bitte ich um Einhaltung der Regeln! DANKÖÖÖ ✨ &lt;3
 
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+Built for the PawEmpire ✨
+
+</footer>
 
 </body>
 </html>
