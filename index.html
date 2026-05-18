@@ -470,91 +470,184 @@ bitte ich um Einhaltung der Regeln! DANKÖÖÖ ✨ &lt;3
 
 </section>
 
-<!-- MARBLE FAMILY -->
+<!-- MARBLE FAMILY SECTION -->
+<section class="marble-family-section">
 
-<section class="info-box" id="marblefamily">
+    <div class="marble-family-card">
 
-<div class="section-image">
+        <video autoplay muted loop playsinline disablePictureInPicture class="mf-video">
+            <source src="Marble_Fam.webm" type="video/webm">
+        </video>
 
-<video autoplay muted loop playsinline controls
-style="
-width:100%;
-max-width:850px;
-border-radius:22px;
-border:2px solid #9c4dff;
-box-shadow:0 0 25px rgba(160,80,255,0.35);
-">
+        <h2>💥 Welcome to the Marble Family 💙</h2>
 
-<source src="Marble_Fam.webm" type="video/webm">
+        <p>
+            The Marble Family is a huge Twitch community built around fun,
+            chaos, friendship and LOTS of marble racing 🎮✨
+        </p>
 
-Your browser does not support the video tag.
+        <p>
+            Whether you're here for crazy events, competitive leagues,
+            chill community nights or just vibing with other marble enjoyers —
+            there's always something happening!
+        </p>
 
-</video>
+        <div class="mf-features">
 
-</div>
+            <div class="mf-feature">
+                🏆 Community Events & Tournaments
+            </div>
 
-<h2>🌟 Welcome to the Marble Family 🌟</h2>
+            <div class="mf-feature">
+                🎮 MANY streamers & unique communities
+            </div>
 
-<p>
-The Marble Family is a huge Twitch community built around fun, chaos, friendship and LOTS of marble racing 🎮✨
-</p>
+            <div class="mf-feature">
+                🌌 Custom Marble Leagues & competitions
+            </div>
 
-<p>
-Whether you're here for crazy events, competitive leagues, chill community nights or just vibing with other marble enjoyers —
-there’s always something happening!
-</p>
+            <div class="mf-feature">
+                💬 Friendly chats & cozy vibes
+            </div>
 
-<p>
-Inside the Marble Family you'll find:
-</p>
+            <div class="mf-feature">
+                🚀 Action, hype & marble chaos for everyone
+            </div>
 
-<p>
-🏆 Community events & tournaments<br>
-🎥 LOTS of awesome streamers<br>
-🔥 Custom Marble leagues<br>
-💬 A friendly and relaxed community<br>
-🎉 Fun and chaos for all ages
-</p>
+        </div>
 
-<p>
-The best part?<br>
-Everybody is welcome.
-</p>
+        <p class="mf-ending">
+            Wanna become part of the Marble Family?
+            Join the community and experience the chaos yourself ✨🐾
+        </p>
 
-<p>
-Whether you're a hardcore grinder, casual viewer, lurker or a full-on marble addict —
-you'll fit right in here 💜
-</p>
+        <div class="mf-buttons">
 
-<p>
-The Marble Family is all about supporting each other, having fun together and building a community where people genuinely enjoy hanging out.
-</p>
+            <a href="https://discord.gg/yAdF6xGveT" target="_blank" class="mf-btn">
+                💬 Join Discord
+            </a>
 
-<p>
-✨ Want even MORE Marble chaos?<br>
-Check out the official Marble Family website:
-</p>
+            <a href="https://www.marble-family.de/" target="_blank" class="mf-btn">
+                🌐 Visit Website
+            </a>
 
-<div style="text-align:center;">
+        </div>
 
-<a href="https://www.marble-family.de/" target="_blank" class="website-button">
-
-➡️ Visit marble-family.de
-
-</a>
-
-</div>
-
-<p style="margin-top:40px;">
-✨ Want to become part of the family?<br>
-Join the Discord and experience the chaos yourself:
-</p>
-
-<p>
-➡️ 
-<a href="https://discord.gg/yAdF6xGveT" target="_blank" style="color:#87c8ff;">
-https://discord.gg/yAdF6xGveT
-</a>
-</p>
+    </div>
 
 </section>
+
+<style>
+
+.marble-family-section{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:80px 20px;
+}
+
+.marble-family-card{
+    width:100%;
+    max-width:1200px;
+    background:rgba(7,10,40,0.92);
+    border:2px solid #a855f7;
+    border-radius:30px;
+    padding:45px;
+    box-shadow:0 0 35px rgba(168,85,247,0.25);
+    text-align:center;
+    backdrop-filter:blur(8px);
+}
+
+.mf-video{
+    width:100%;
+    max-width:850px;
+    border-radius:22px;
+    border:2px solid #9c4dff;
+    box-shadow:0 0 25px rgba(160,80,255,0.35);
+    margin-bottom:35px;
+    pointer-events:none;
+}
+
+.marble-family-card h2{
+    font-size:3rem;
+    margin-bottom:30px;
+    background:linear-gradient(90deg,#ff8ce9,#9dc6ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.marble-family-card p{
+    font-size:1.35rem;
+    line-height:1.8;
+    color:white;
+    margin-bottom:28px;
+}
+
+.mf-features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+    margin:45px 0;
+}
+
+.mf-feature{
+    background:rgba(20,25,65,0.95);
+    border:2px solid #8b5cf6;
+    border-radius:18px;
+    padding:22px;
+    font-size:1.1rem;
+    color:white;
+    transition:0.25s;
+}
+
+.mf-feature:hover{
+    transform:translateY(-5px) scale(1.02);
+    box-shadow:0 0 20px rgba(168,85,247,0.4);
+}
+
+.mf-ending{
+    margin-top:20px;
+    font-size:1.3rem;
+}
+
+.mf-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.mf-btn{
+    padding:16px 28px;
+    border-radius:14px;
+    background:linear-gradient(90deg,#a855f7,#60a5fa);
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.25s;
+    box-shadow:0 0 20px rgba(140,90,255,0.35);
+}
+
+.mf-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 28px rgba(140,90,255,0.55);
+}
+
+@media(max-width:768px){
+
+    .marble-family-card{
+        padding:28px;
+    }
+
+    .marble-family-card h2{
+        font-size:2rem;
+    }
+
+    .marble-family-card p{
+        font-size:1.05rem;
+    }
+
+}
+
+</style>
