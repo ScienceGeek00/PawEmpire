@@ -1,148 +1,666 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PawEmpire</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #070b14;
-      color: white;
+<title>PawEmpire | ScienceGeek00</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ========================= */
+/* BACKGROUND */
+/* ========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#7a3cff33,transparent 35%),
+    radial-gradient(circle at bottom right,#00c3ff22,transparent 35%),
+    linear-gradient(180deg,#071021 0%, #050816 100%);
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+    radial-gradient(#ffffff22 1px, transparent 1px);
+    background-size:40px 40px;
+    opacity:0.2;
+    z-index:-1;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:520px;
+    overflow:hidden;
+}
+
+.hero img.banner{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.45);
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.profile-pic{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:5px solid #9f6bff;
+    box-shadow:
+    0 0 30px #9f6bff88,
+    0 0 60px #00d0ff44;
+    margin-bottom:20px;
+    object-fit:cover;
+    background:#111;
+}
+
+.hero h1{
+    font-size:70px;
+    font-weight:700;
+    background:linear-gradient(90deg,#a86fff,#4fdfff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    font-size:20px;
+    margin-top:10px;
+    color:#d5d5d5;
+}
+
+/* ========================= */
+/* BUTTON PANELS */
+/* ========================= */
+
+.panel-links{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+    padding:40px 30px;
+}
+
+.panel-links a{
+    transition:0.25s;
+}
+
+.panel-links a:hover{
+    transform:translateY(-8px) scale(1.03);
+    filter:drop-shadow(0 0 20px #9f6bff88);
+}
+
+.panel-links img{
+    width:100%;
+}
+
+/* ========================= */
+/* SEARCH */
+/* ========================= */
+
+.search-box{
+    max-width:1200px;
+    margin:10px auto 50px auto;
+    padding:0 25px;
+}
+
+.search-box input{
+    width:100%;
+    padding:18px 24px;
+    border:none;
+    border-radius:18px;
+    background:#111b35;
+    color:white;
+    font-size:17px;
+    outline:none;
+    border:2px solid transparent;
+    transition:0.2s;
+}
+
+.search-box input:focus{
+    border-color:#8e59ff;
+    box-shadow:0 0 20px #8e59ff44;
+}
+
+/* ========================= */
+/* COMMAND SECTIONS */
+/* ========================= */
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:0 30px 80px 30px;
+}
+
+.section{
+    margin-bottom:70px;
+}
+
+.section-title{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:25px;
+    font-size:38px;
+    font-weight:700;
+    color:#ff8cff;
+}
+
+.command-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.command-card{
+    background:#101a33;
+    border:2px solid #7f4fff;
+    border-radius:24px;
+    padding:24px;
+    transition:0.2s;
+    position:relative;
+    overflow:hidden;
+}
+
+.command-card:hover{
+    transform:translateY(-5px);
+    box-shadow:
+    0 0 25px #7f4fff55,
+    0 0 40px #00cfff22;
+}
+
+.command-card h3{
+    color:#61dfff;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.command-card p{
+    color:#d7d7d7;
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* ========================= */
+/* RULES */
+/* ========================= */
+
+.rules-box{
+    margin-top:20px;
+    background:#101a33;
+    border:2px solid #ff7af5;
+    border-radius:28px;
+    padding:35px;
+}
+
+.rules-box ul{
+    list-style:none;
+}
+
+.rules-box li{
+    margin-bottom:18px;
+    font-size:18px;
+    color:#f0f0f0;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer{
+    text-align:center;
+    padding:50px 20px;
+    color:#aaa;
+    font-size:16px;
+}
+
+.footer img{
+    width:80px;
+    margin-bottom:15px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .hero{
+        height:620px;
     }
 
-    header {
-      padding: 40px;
-      text-align: center;
-      background: linear-gradient(90deg,#111827,#1e293b);
-      border-bottom: 2px solid #7c3aed;
+    .hero h1{
+        font-size:48px;
     }
 
-    h1 {
-      margin: 0;
-      color: #c084fc;
-      font-size: 3rem;
+    .hero p{
+        font-size:16px;
     }
 
-    .subtitle {
-      color: #94a3b8;
-      margin-top: 10px;
+    .section-title{
+        font-size:30px;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 30px;
-    }
+}
 
-    .search {
-      width: 100%;
-      padding: 15px;
-      border-radius: 15px;
-      border: none;
-      background: #111827;
-      color: white;
-      margin-bottom: 30px;
-      font-size: 1rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #111827;
-      border: 1px solid #7c3aed;
-      border-radius: 20px;
-      padding: 20px;
-      transition: 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 25px rgba(124,58,237,0.5);
-    }
-
-    .card h2 {
-      margin-top: 0;
-      color: #e879f9;
-    }
-
-    .command {
-      background: #1e293b;
-      border-radius: 10px;
-      padding: 10px;
-      margin-top: 10px;
-      font-family: monospace;
-      color: #93c5fd;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #64748b;
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>🐾 PawEmpire</h1>
-  <div class="subtitle">
-    Official ScienceGeek00 Community Hub
-  </div>
-</header>
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section class="hero">
+
+    <img class="banner" src="Profil_Banner.png">
+
+    <div class="hero-overlay">
+
+        <img class="profile-pic" src="Profile_Picture (2).png">
+
+        <h1>PawEmpire</h1>
+
+        <p>Official ScienceGeek00 Community Hub</p>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PANELS -->
+<!-- ========================= -->
+
+<section class="panel-links">
+
+    <a href="#about">
+        <img src="About_Panel.png">
+    </a>
+
+    <a href="https://discord.gg/DdwHBamfbQ" target="_blank">
+        <img src="Discord_Panel.png">
+    </a>
+
+    <a href="https://streamelements.com/sciencegeek00/tip" target="_blank">
+        <img src="Donate_Panel.png">
+    </a>
+
+    <a href="#rules">
+        <img src="Rules_Panel.png">
+    </a>
+
+    <a href="https://www.twitch.tv/team/w00lfpack" target="_blank">
+        <img src="w00lfpack_Panel.png">
+    </a>
+
+    <a href="https://www.twitch.tv/team/mcu" target="_blank">
+        <img src="image(17).png">
+    </a>
+
+</section>
+
+<!-- ========================= -->
+<!-- SEARCH -->
+<!-- ========================= -->
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search commands...">
+</div>
+
+<!-- ========================= -->
+<!-- CONTENT -->
+<!-- ========================= -->
 
 <div class="container">
 
-  <input class="search" placeholder="Search commands...">
+<!-- ABOUT -->
 
-  <div class="grid">
+<section class="section" id="about">
 
-    <div class="card">
-      <h2>🎮 Games</h2>
-
-      <div class="command">!rumble</div>
-      <div class="command">!duel</div>
-      <div class="command">!gamble</div>
-      <div class="command">!scratch</div>
+    <div class="section-title">
+        <img src="Frame5_ZackZack.png" width="70">
+        About PawEmpire
     </div>
 
-    <div class="card">
-      <h2>💰 Points</h2>
+    <div class="rules-box">
 
-      <div class="command">!points</div>
-      <div class="command">!top</div>
-      <div class="command">!give</div>
+        <p style="font-size:19px; line-height:1.9; color:#e8e8e8;">
+            Welcome to the PawEmpire ✨<br><br>
+
+            Cozy chaos, Marbles on Stream, viewer games, loyalty systems,
+            community events and LOTS of cat energy 🐾<br><br>
+
+            This website contains all important commands,
+            community links and features for the ScienceGeek00 stream.
+        </p>
+
     </div>
 
-    <div class="card">
-      <h2>👀 Lurk</h2>
+</section>
 
-      <div class="command">!lurk</div>
-      <div class="command">!unlurk</div>
-      <div class="command">!lurks</div>
+<!-- GAMES -->
+
+<section class="section">
+
+    <div class="section-title">
+        🎮 Games
     </div>
 
-    <div class="card">
-      <h2>⏱️ Watchtime</h2>
+    <div class="command-grid">
 
-      <div class="command">!watchtime</div>
-      <div class="command">!topwatchtime</div>
+        <div class="command-card">
+            <h3>!rumble</h3>
+            <p>Start a viewer rumble battle and fight for PawPoints.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!enterRumble</h3>
+            <p>Join the active rumble before the timer ends.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!gamble</h3>
+            <p>Risk your PawPoints and test your luck 🎲</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!scratchCard</h3>
+            <p>Buy a scratch card and try to hit the jackpot 💸</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!duel</h3>
+            <p>Challenge another viewer to a duel ⚔️</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!accept</h3>
+            <p>Accept an incoming duel request.</p>
+        </div>
+
     </div>
 
-  </div>
+</section>
+
+<!-- POINTS -->
+
+<section class="section">
+
+    <div class="section-title">
+        💰 Loyalty Points
+    </div>
+
+    <div class="command-grid">
+
+        <div class="command-card">
+            <h3>!points</h3>
+            <p>Check your PawPoints balance.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!givePoints</h3>
+            <p>Transfer PawPoints to another viewer.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!pointsLeaderboard</h3>
+            <p>See the richest PawEmpire members 👑</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!collectTaxes</h3>
+            <p>Collect taxes from the entire chat 💀</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!pointsHappyHour</h3>
+            <p>Activate boosted PawPoints earnings ✨</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PAWDROP -->
+
+<section class="section">
+
+    <div class="section-title">
+        🐾 PawDrop Minigame
+    </div>
+
+    <div class="command-grid">
+
+        <div class="command-card">
+            <h3>!cashout</h3>
+            <p>Claim your PawDrop rewards.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!myRank</h3>
+            <p>Check your current PawDrop ranking.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!stats</h3>
+            <p>See your PawDrop statistics.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!topDrop</h3>
+            <p>Show the best PawDrop players.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!topLifetime</h3>
+            <p>Lifetime PawDrop leaderboard.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!lucky</h3>
+            <p>See who has the craziest luck 🍀</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LURK -->
+
+<section class="section">
+
+    <div class="section-title">
+        👀 Lurk System
+    </div>
+
+    <div class="command-grid">
+
+        <div class="command-card">
+            <h3>!lurk</h3>
+            <p>Disappear into the shadows for a while 🌙</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!unlurk</h3>
+            <p>Return from the shadows with snacks 🍿</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!lurkers</h3>
+            <p>Check who is currently lurking.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!lurkStats</h3>
+            <p>View your total lurk statistics.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!lurkLeaderboard</h3>
+            <p>Top lurkers of the PawEmpire 👑</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WATCHTIME -->
+
+<section class="section">
+
+    <div class="section-title">
+        ⏱️ Watchtime
+    </div>
+
+    <div class="command-grid">
+
+        <div class="command-card">
+            <h3>!watchtime</h3>
+            <p>Check your total stream watchtime.</p>
+        </div>
+
+        <div class="command-card">
+            <h3>!watchtimeLeaderboard</h3>
+            <p>See the most dedicated viewers 💙</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FUN -->
+
+<section class="section">
+
+    <div class="section-title">
+        🎉 Community & Fun
+    </div>
+
+    <div class="command-grid">
+
+        <div class="command-card"><h3>!hug</h3><p>Give someone a hug 🫂</p></div>
+        <div class="command-card"><h3>!knutschen</h3><p>Maximum chaos.</p></div>
+        <div class="command-card"><h3>!party</h3><p>Start a party 🎉</p></div>
+        <div class="command-card"><h3>!dance</h3><p>Dance time 💃</p></div>
+        <div class="command-card"><h3>!raid</h3><p>Raid hype incoming 🚀</p></div>
+        <div class="command-card"><h3>!raid2</h3><p>Even MORE raid hype.</p></div>
+        <div class="command-card"><h3>!hype</h3><p>Activate HYPE MODE ✨</p></div>
+        <div class="command-card"><h3>!pedro</h3><p>Pedro moment.</p></div>
+
+    </div>
+
+</section>
+
+<!-- RULES -->
+
+<section class="section" id="rules">
+
+    <div class="section-title">
+        📜 Stream Rules
+    </div>
+
+    <div class="rules-box">
+
+        <ul>
+
+            <li>🌍 Only Ger/Eng Chat</li>
+
+            <li>🚫 Keine anstößigen Kommentare</li>
+
+            <li>📢 Keine Eigenwerbung</li>
+
+            <li>🔒 Keine Fragen zum Privatleben</li>
+
+            <li>🛡️ Gib keine persönlichen Daten heraus</li>
+
+            <li>⚠️ Keine politischen oder religiösen Themen</li>
+
+        </ul>
+
+    </div>
+
+</section>
 
 </div>
 
-<footer>
-  Built for the PawEmpire ✨
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <img src="WhiteMoon-Cat-HI2-400px.gif">
+
+    <p>Built for the PawEmpire ✨</p>
+
 </footer>
+
+<!-- ========================= -->
+<!-- SEARCH SCRIPT -->
+<!-- ========================= -->
+
+<script>
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function() {
+
+    const value = this.value.toLowerCase();
+
+    const cards = document.querySelectorAll(".command-card");
+
+    cards.forEach(card => {
+
+        const text = card.innerText.toLowerCase();
+
+        if(text.includes(value)){
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
